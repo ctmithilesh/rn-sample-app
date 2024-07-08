@@ -1,12 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import Header from './components/Header';
+import Navigation from './components/navigation';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import DemoCard from './components/demo-card';
+import ProductScreen from './screens/ProductScreen';
+import CounterScreen from './screens/CounterScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaProvider>
+      <CounterScreen />
+    </SafeAreaProvider>
+
   );
 }
 
