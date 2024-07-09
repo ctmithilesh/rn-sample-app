@@ -4,7 +4,7 @@ import { Text } from "react-native-paper";
 import DemoCard from "../components/demo-card";
 import { fetchProductData } from "../utils/apis/fetchProductData";
 import Navigation from "../components/navigation";
-const ProductScreen = () => {
+const ProductScreen = ({ navigation }) => {
   // lifecycle
   // gets triggered whenever component renders
 
@@ -23,7 +23,7 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Navigation title={"Products"} />
+      <Navigation title={"Products"} navigation={navigation} path="counter" />
       <ScrollView>
         <DemoCard data={data} />
       </ScrollView>

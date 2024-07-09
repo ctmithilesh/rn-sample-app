@@ -2,17 +2,21 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { Appbar } from "react-native-paper";
 
-const Navigation = ({ title }) => {
+const Navigation = ({ title, navigation, path }) => {
   return (
     <Appbar.Header style={navStyles}>
       <Appbar.Content title={title} />
-      <Appbar.Action icon="magnify" onPress={() => {}} />
+
+      <Appbar.Action
+        icon="plus"
+        onPress={() => navigation.navigate({ name: path })}
+      />
     </Appbar.Header>
   );
 };
 
 const navStyles = StyleSheet.create({
-  backgroundColor: "#34495e",
+  backgroundColor: "#1abc9c",
 });
 
 export default Navigation;
